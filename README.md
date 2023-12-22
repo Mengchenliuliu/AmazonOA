@@ -34,4 +34,15 @@ Question7: (https://github.com/perixtar/2024-Tech-OA)
 Question8:  
 ![question8](/images/question8.png)  
 
+Question9:
+![question9_1](/images/question9_1.png)
+![question9_2](/images/question9_2.png) 
 
+Question10:  
+![question10](/images/question10.png)  
+
+Question11:  
+![question11](/images/question11.png)  
+
+Question12:  
+![question12](/images/question12.png)  
