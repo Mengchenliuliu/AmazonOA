@@ -53,3 +53,6 @@ code.Question13:
 Question14:  
 ![question14](/images/question14.png)  
 
+Question15:  
+![question15_1](/images/question15_1.png)
+![question15_2](/images/question15_2.png)

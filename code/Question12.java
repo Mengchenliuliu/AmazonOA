@@ -6,33 +6,35 @@ import java.util.*;
 public class Question12 {
 
   public static void main(String[] args) {
-    System.out.println(calculateScore("GoodProductButScrapAfterWash", new String[]{"crap", "odpro"}));
+    System.out.println(calculateScore("GoodProductButScrapAfterWash", List.of("crap", "odpro")));
   }
 
-  public static int calculateScore(String review, String[] prohibitedWords) {
-    String fixReview = review.toLowerCase();
-    int minLen = Integer.MAX_VALUE, maxLen = 0;
-    int n = review.length();
+  //leetcode 2781
+  public static int calculateScore(String word, List<String> forbidden) {
     Set<String> set = new HashSet<>();
-    for(String word : prohibitedWords){
-      set.add(word.toLowerCase());
-      minLen = Math.min(minLen, word.length());
-      maxLen = Math.max(maxLen, word.length());
+    String newWord = word.toLowerCase();
+    int max = 0;
+    for(String s : forbidden){
+      max = Math.max(max , s.length());
+      set.add(s.toLowerCase());
     }
-    int res = 0;
-    int preIndex = 0;
-    for(int i = 0; i <= n - minLen; i++){
-      for(int j = i + minLen; j <= i + maxLen && j < n; j++){
-        if(set.contains(fixReview.substring(i, j))){
-          res = Math.max(res, j - preIndex - 1);
-          preIndex = i + 1;
+    int ans = 0;
+    StringBuilder sb = new StringBuilder();
+    for(int i = 0 ; i < newWord.length() ; i++){
+      char ch = newWord.charAt(i);
+      sb.append(ch +"");
+      int len = sb.length();
+      for(int j = len - 1 ; j >= Math.max(0 , len - max); j--){
+        String s = sb.substring(j);
+        if(set.contains(s)){
+          sb.delete(0 , j + 1);
           break;
+
         }
       }
+      ans = Math.max(sb.length() , ans);
     }
-    return res;
-
-
+    return ans;
   }
 
 }
