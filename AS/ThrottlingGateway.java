@@ -1,7 +1,6 @@
-package code;
+package AS;
 
-public class Question6 {
-
+public class ThrottlingGateway {
   public static void main(String[] args) {
     System.out.println(dropRequest(new int[]{1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7}));
     System.out.println(dropRequest(new int[]{1,1,1,1,2}));
@@ -26,5 +25,4 @@ public class Question6 {
     }
     return drop;
   }
-
 }

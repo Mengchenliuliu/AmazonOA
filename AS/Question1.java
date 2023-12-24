@@ -1,4 +1,4 @@
-package code;
+package AS;
 
 public class Question1 {
 

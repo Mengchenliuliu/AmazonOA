@@ -1,8 +1,8 @@
-package code;
+package AS;
 
 import java.util.*;
-public class Question5 {
 
+public class Anagrams {
   public static void main(String[] args) {
     List<String> list = List.of("code", "doce", "ecod", "framer", "frame");
     List<String> res = removeAnagram(list);
@@ -30,5 +30,4 @@ public class Question5 {
     Collections.sort(res);
     return res;
   }
-
 }
